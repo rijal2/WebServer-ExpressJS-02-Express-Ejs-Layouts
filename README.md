@@ -12,3 +12,6 @@ Memanfaatkan NPM dari express untuk membuat halaman menjadi lebih fleksibel dan 
     app.use(expressLayouts);
 
 CARA MENGGUNAKAN
+1. Buat layout utama dengan nama main-layouts.ejs (namanya bebas). Sehingga kedepan sudah tidak membutuhkan lagi file header.ejs, footer.ejs.
+
+2. 
