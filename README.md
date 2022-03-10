@@ -1,5 +1,5 @@
 # WebServer-ExpressJS-02-Express-Ejs-Layouts
-Memanfaatkan NPM dari express untuk membuat halaman menjadi lebih fleksibel dan dinamis. Fasilitas yang digunakan adalah Express-ejs-layputs
+Memanfaatkan NPM dari express untuk membuat halaman menjadi lebih fleksibel dan dinamis. Fasilitas yang digunakan adalah Express-ejs-layouts
 
 1. Install express-ejs-layouts@2.5.0
     Untuk dokumentasi nya bisa cek disini:
@@ -18,5 +18,16 @@ CARA MENGGUNAKAN
 3. Di dalam element body tambahkan tag ejs
     <%- body %>
     tag tersebut boleh disimpan didalam container atau diluar container.
-    tulisan body pada tag tersbut akan menjadi tempat penyimpanan semua elemnt yang akan di import ke halaman tersebut
-4. 
+    tulisan body pada tag tersbut akan menjadi tempat penyimpanan semua elemnt yang akan di import ke halaman main-layout
+
+AGAR main-layout.ejs dapat menerima file-file yang akan di import
+4. Memanggil File ejs agar bisa digunakan di main-layout.ejs.
+5. Panggil element nav yang tersimpan pada file nav.ejs dengan menuliskan
+    <%- include('nav') %>
+
+    Tulisan yang berada di dalam kuurung merupakan alamat file yang relatif terhadap file main-layout.ejs
+6. Pada file yang akan di import hapus semua metode include(). Sehingga menyisakan elemen utama nya saja.\
+    Contoh:
+    Pada halaman / file about.ejs. Di dalam file tersebut hanya tinggal elemen
+    <h1>Ini adalah Halaman About dari file about.html</h1>
+7. 
