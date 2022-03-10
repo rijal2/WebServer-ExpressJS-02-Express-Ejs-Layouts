@@ -14,4 +14,9 @@ Memanfaatkan NPM dari express untuk membuat halaman menjadi lebih fleksibel dan 
 CARA MENGGUNAKAN
 1. Buat layout utama dengan nama main-layouts.ejs (namanya bebas). Sehingga kedepan sudah tidak membutuhkan lagi file header.ejs, footer.ejs.
 
-2. 
+2. Mengisi file main-layout.ejs dengan starter template dari bootstrap
+3. Di dalam element body tambahkan tag ejs
+    <%- body %>
+    tag tersebut boleh disimpan didalam container atau diluar container.
+    tulisan body pada tag tersbut akan menjadi tempat penyimpanan semua elemnt yang akan di import ke halaman tersebut
+4. 
