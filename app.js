@@ -35,13 +35,18 @@ app.get('/', (req, res) => {
 //Setting halaman about
 app.get('/about', (req, res) => {
     // res.sendFile('./about.html', {root: __dirname})
-    res.render('about')
+    res.render('about', {
+        title: "Halaman About",
+        layout: "layouts/main-layout"
+    })
 })
 
 //Setting halaman Contact
 app.get('/contact', (req, res) => {
     // res.sendFile('./contact.html', {root: __dirname})
-    res.render('contact')
+    res.render('contact', {
+        title: "Halaman Contact",
+        layout: "layouts/main-layout"})
 })
 
 //Latihan menggunakan metode rq.params. Penggunan metode ini akan menangkap request URL yang memiliki pola seperti ini: http://localhost:3000/produk/8/ctegory/rumah

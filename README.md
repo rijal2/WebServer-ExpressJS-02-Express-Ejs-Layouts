@@ -30,4 +30,18 @@ AGAR main-layout.ejs dapat menerima file-file yang akan di import
     Contoh:
     Pada halaman / file about.ejs. Di dalam file tersebut hanya tinggal elemen
     <h1>Ini adalah Halaman About dari file about.html</h1>
-7. 
+
+AGAR TITLE JUGA IKUT BERUBAH SESUAI HALAMAN YANG DI IMPORT
+7. Tambahkan parameter yang berupa object pada metode res.render(). Sehingga parameter tersebut berisi properti title dan layouts. Properti title diisi dengan nama halaman, sedangkan layouts diisi dengan alamat file main-layouts.ejs yang relatif terhadap file yang akan diimport.
+    Contoh:
+    Halaman about
+    app.get('/about', (req, res) => {
+        res.render('about', {
+        title: "Halaman About",
+        layout: "layouts/main-layout"
+        })
+    })
+
+8. Pada file main-layout.ejs ubah title nya dengan tag ejs
+    <title><%= title %>  </title>
+    Bertujuan agar nama title nya sesuai dengan yang disetting di app.get() nya
