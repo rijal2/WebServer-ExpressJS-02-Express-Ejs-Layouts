@@ -1,9 +1,11 @@
-const express = require('express')
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 const app = express()
 const port = 3000
 
 //Menggunakan ejs
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
 
 
 //Setting halaman root (home)
